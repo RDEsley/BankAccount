@@ -29,7 +29,7 @@ public class BankAccount {
             } else if (attempt < maxAttempts) {
                 System.out.println("Incorrect Password! You have " + (maxAttempts - attempt) + " more chances!");
             } else {
-                System.out.println("Incorrect Password! You have reached the maximum number of attempts. Exiting...");
+                System.out.println("Incorrect Password! You have reached the maximum number of attempts. \nAccount Blocked.");
                 return; // Exits the program
             }
         }
