@@ -74,7 +74,7 @@ public class BankAccount {
                     balance += value;
                     System.out.println("The value has add to your balance successfully!\nYour Current balance is now: " + balance);
                 // Else if Choice 04
-                } else if (choice >= 4) {
+                } else if (choice != 4) {
                     System.out.println("Invalid Option! Try Again...");
                 }
             }
