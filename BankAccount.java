@@ -57,7 +57,7 @@ public class BankAccount {
                 // If Choice 01
                 if (choice == 1) {
                     System.out.println("The Current balance is " + balance);
-                // Else if Choice 02
+                    // Else if Choice 02
                 } else if (choice == 2) {
                     System.out.println("What is the amount you want to transfer: ");
                     double value = sc.nextDouble();
@@ -67,15 +67,18 @@ public class BankAccount {
                         balance -= value;
                         System.out.println("The amount was transferred successfully!\nYour current balance is now: " + balance);
                     }
-                // Else if Choice 03
+                    // Else if Choice 03
                 } else if (choice == 3) {
                     System.out.println("Value received: ");
                     double value = sc.nextDouble();
                     balance += value;
                     System.out.println("The value has add to your balance successfully!\nYour Current balance is now: " + balance);
-                // Else if Choice 04
-                } else if (choice != 4) {
-                    System.out.println("Invalid Option! Try Again...");
+                    // Else if Choice 04
+                } else if (choice == 4) {
+                    System.out.println("Until next time! Exiting... ");
+
+                } else {
+                    System.out.println("Invalid input, try again...");
                 }
             }
         }
