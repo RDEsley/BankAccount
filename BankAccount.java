@@ -3,7 +3,7 @@ import java.util.Scanner;
 // BankAccount
 public class BankAccount {
     public static void main(String[] args) {
-        Scanner list = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 
         // Variables
         String name = null;
@@ -16,12 +16,12 @@ public class BankAccount {
 
         // Inputs
         System.out.println("Type your First name: ");
-        name = list.nextLine();
+        name = sc.nextLine();
 
         // 3 attempts
         for (int attempt = 1; attempt <= maxAttempts; attempt++) {
             System.out.println("Type your Password: (Try '123456')");
-            password = list.nextInt();
+            password = sc.nextInt();
 
             if (password == 123456) {
                 accessGranted = true;
@@ -38,7 +38,7 @@ public class BankAccount {
             // Account Type
             System.out.println("\nWelcome Back, " + name + "!" + "\nAccount Type: \n[1] - Current Account");
             while (accountType != 1) {
-                accountType = list.nextInt();
+                accountType = sc.nextInt();
                 if (accountType != 1) {
                     System.out.println("Invalid Option! Try again...");
                 }
@@ -53,14 +53,14 @@ public class BankAccount {
             // Loop While
             while (choice != 4) {
                 System.out.println(menu);
-                choice = list.nextInt();
+                choice = sc.nextInt();
                 // If Choice 01
                 if (choice == 1) {
                     System.out.println("The Current balance is " + balance);
                 // Else if Choice 02
                 } else if (choice == 2) {
                     System.out.println("What is the amount you want to transfer: ");
-                    double value = list.nextDouble();
+                    double value = sc.nextDouble();
                     if (value > balance) {
                         System.out.println("Insufficient Value!\nYour balance is: " + balance);
                     } else {
@@ -70,7 +70,7 @@ public class BankAccount {
                 // Else if Choice 03
                 } else if (choice == 3) {
                     System.out.println("Value received: ");
-                    double value = list.nextDouble();
+                    double value = sc.nextDouble();
                     balance += value;
                     System.out.println("The value has add to your balance successfully!\nYour Current balance is now: " + balance);
                 // Else if Choice 04
